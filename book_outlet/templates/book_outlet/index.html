@@ -5,7 +5,8 @@
 {% block body %}
   <ul>
     {% for book in books %}
-      <li>{{ book.title }}  {{ book.author }} {{ book.rating }} {{ book.is_bestselling }}</li>
+      <li><a href="{{ book.get_absolute_url }}">{{ book.title }}</a>
+        {{ book.author }} {{ book.rating }} {{ book.is_bestselling }}</li>
     {% endfor %}
   </ul>
 {% endblock %}
