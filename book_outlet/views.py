@@ -14,13 +14,13 @@ def home(request):
     )
 
 
-def book_detail(request, book_id):
+def book_detail(request, slug):
     # try:
     #     book = Book.objects.get(id=book_id)
     # except Book.DoesNotExist:
     #     raise Http404()
 
-    book = get_object_or_404(Book, id=book_id)
+    book = get_object_or_404(Book, slug=slug)
 
     return render(
         request,
