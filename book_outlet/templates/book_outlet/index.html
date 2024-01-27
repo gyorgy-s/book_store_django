@@ -3,6 +3,9 @@
 {% block title %} Book outlet {% endblock %}
 
 {% block body %}
+  <p>Total number of books: {{ total_number_of_books }}</p>
+  <p>Average rating: {{ average_rating.rating__avg|floatformat:2 }}</p>
+  <hr>
   <ul>
     {% for book in books %}
       <li><a href="{{ book.get_absolute_url }}">{{ book.title }}</a>
